@@ -1,0 +1,15 @@
+mylist = [1,2,3,4,5,6,7,8,9]
+n = 4
+
+method 1 - list comprehension
+final = [mylist[i*n:(i+1)*n for i in range((len(mylist) + n - 1)//n)]
+
+method 2 - generator
+def divide_chuncks(l,n):
+  for i in range(0, len(l), n):
+    yield l[i:i+n]
+    
+final =list(divide_chuncks(mylist,n))
+
+
+final = [[1,2,3,4],[5,6,7,8],[9]]
