@@ -1,0 +1,17 @@
+>>> line
+'hi, this is ABC oh my god!!'
+>>> line.find("o")
+16
+>>> line.index("o")
+16
+
+#Explanation:
+#str.find returns -1 when it does not find the substring.
+>>> line = 'hi, this is ABC oh my god!!'
+>>> line.find('?')
+-1
+#While str.index raises ValueError:
+>>> line.index('?')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: substring not found
